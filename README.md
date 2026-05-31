@@ -1,1 +1,1 @@
-# wedding-invitation
+# wedding-invite
