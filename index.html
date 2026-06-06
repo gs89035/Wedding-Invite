@@ -70,6 +70,18 @@
         background-repeat: no-repeat;
       }
 
+      #hero::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: rgba(255, 255, 255, 0.03);
+        pointer-events: none;
+        z-index: 1;
+        backdrop-filter: blur(1.5px);
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.42);
+      }
+
       .hero-canvas {
         position: absolute;
         inset: 0;
@@ -136,19 +148,6 @@
         max-width: 90vw;
         padding: 28px 24px;
         margin: 0 auto;
-      }
-
-      .hero-content::before {
-        content: '';
-        position: absolute;
-        inset: -46px;
-        background: rgba(255, 255, 255, 0.24);
-        pointer-events: none;
-        z-index: -1;
-        border-radius: 40px;
-        backdrop-filter: blur(34px);
-        box-shadow: 0 30px 110px rgba(0, 0, 0, 0.14);
-        border: 1px solid rgba(255, 255, 255, 0.65);
       }
 
       .hero-eyebrow {
