@@ -141,14 +141,14 @@
       .hero-content::before {
         content: '';
         position: absolute;
-        inset: 0;
-        background: rgba(255, 255, 255, 0.22);
+        inset: -46px;
+        background: rgba(255, 255, 255, 0.24);
         pointer-events: none;
         z-index: -1;
-        border-radius: 32px;
-        backdrop-filter: blur(16px);
-        box-shadow: 0 24px 80px rgba(0, 0, 0, 0.12);
-        border: 1px solid rgba(255, 255, 255, 0.55);
+        border-radius: 40px;
+        backdrop-filter: blur(34px);
+        box-shadow: 0 30px 110px rgba(0, 0, 0, 0.14);
+        border: 1px solid rgba(255, 255, 255, 0.65);
       }
 
       .hero-eyebrow {
@@ -236,6 +236,13 @@
           width: min(100%, 94vw);
         }
 
+        .hero-content::before {
+          inset: -32px;
+          border-radius: 34px;
+          backdrop-filter: blur(28px);
+          box-shadow: 0 24px 90px rgba(0, 0, 0, 0.14);
+        }
+
         .hero-names {
           font-size: clamp(40px, 10vw, 80px);
         }
@@ -264,6 +271,13 @@
         .hero-content {
           width: min(100%, 96vw);
           padding: 0 16px;
+        }
+
+        .hero-content::before {
+          inset: -18px;
+          border-radius: 30px;
+          backdrop-filter: blur(22px);
+          box-shadow: 0 20px 70px rgba(0, 0, 0, 0.12);
         }
 
         .hero-names {
