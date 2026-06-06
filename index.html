@@ -51,22 +51,19 @@
       /* ── HERO ── */
       #hero {
         position: relative;
-        min-height: 100vh;
-        height: auto;
+        min-height: 100dvh;
         width: 100%;
-        max-width: none;
-        padding: 0;
-        margin: 0;
+
         display: flex;
-        flex-direction: column;
         align-items: center;
         justify-content: center;
+
+        padding: 24px;
         overflow: hidden;
-        /* Image background for the hero section.
-           Replace 'hero.jpeg' with your image file or a remote URL. */
+
         background-image: url('hero1.jpeg');
         background-size: cover;
-        background-position: center;
+        background-position: center center;
         background-repeat: no-repeat;
       }
 
@@ -74,12 +71,9 @@
         content: '';
         position: absolute;
         inset: 0;
-        background: rgba(255, 255, 255, 0.03);
-        pointer-events: none;
+        background: rgba(255, 255, 255, 0.02);
         z-index: 1;
-        backdrop-filter: blur(0.5px);
-        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.04);
-        border: 1px solid rgba(255, 255, 255, 0.42);
+        pointer-events: none;
       }
 
       .hero-canvas {
@@ -143,11 +137,19 @@
       .hero-content {
         position: relative;
         z-index: 2;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
         text-align: center;
-        width: min(100%, 900px);
-        max-width: 90vw;
-        padding: 28px 24px;
+
+        width: 100%;
+        max-width: 900px;
+
         margin: 0 auto;
+        padding: 24px;
       }
 
       .hero-eyebrow {
@@ -225,6 +227,47 @@
         animation: fadeUp 1s ease both 0.9s;
       }
 
+      @media (max-width: 768px) {
+        #hero {
+          min-height: 100svh;
+          padding: 20px;
+          background-position: center center;
+        }
+
+        .hero-content {
+          width: 100%;
+          max-width: 100%;
+          padding: 12px;
+        }
+
+        .hero-names {
+          font-size: clamp(32px, 12vw, 52px);
+          line-height: 1.1;
+        }
+
+        .hero-tagline {
+          font-size: 14px;
+          line-height: 1.6;
+          max-width: 90%;
+          margin-inline: auto;
+        }
+
+        .hero-date-tag {
+          width: auto;
+          max-width: 280px;
+          margin-inline: auto;
+        }
+
+        .cta-btn {
+          width: 100%;
+          max-width: 260px;
+        }
+
+        .scroll-hint {
+          display: none;
+        }
+      }
+
       @media (max-width: 900px) {
         #hero {
           min-height: 75vh;
@@ -232,7 +275,21 @@
         }
 
         .hero-content {
-          width: min(100%, 94vw);
+          position: relative;
+          z-index: 2;
+
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+
+          text-align: center;
+
+          width: 100%;
+          max-width: 900px;
+
+          margin: 0 auto;
+          padding: 24px;
         }
 
         .hero-content::before {
@@ -263,8 +320,9 @@
 
       @media (max-width: 520px) {
         #hero {
-          /* increase hero height a bit to avoid excessive cropping */
-          min-height: 65vh;
+          /* force the hero to fill the mobile viewport */
+          min-height: 100vh;
+          height: 100vh;
           padding: 28px 0 20px;
           /* let the image cover the area while keeping top-focused composition */
           background-size: cover;
@@ -272,8 +330,21 @@
         }
 
         .hero-content {
-          width: min(100%, 96vw);
-          padding: 8px 14px;
+          position: relative;
+          z-index: 2;
+
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+
+          text-align: center;
+
+          width: 100%;
+          max-width: 900px;
+
+          margin: 0 auto;
+          padding: 24px;
         }
 
         .hero-content::before {
@@ -314,7 +385,21 @@
 
       @media (min-width: 1300px) {
         .hero-content {
-          width: min(100%, 860px);
+          position: relative;
+          z-index: 2;
+
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+
+          text-align: center;
+
+          width: 100%;
+          max-width: 900px;
+
+          margin: 0 auto;
+          padding: 24px;
         }
 
         .hero-names {
