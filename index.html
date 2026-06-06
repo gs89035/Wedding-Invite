@@ -263,12 +263,12 @@
 
       @media (max-width: 520px) {
         #hero {
-          /* shorter hero height on phones to preserve focal area */
-          min-height: 55vh;
+          /* increase hero height a bit to avoid excessive cropping */
+          min-height: 65vh;
           padding: 28px 0 20px;
-          /* scale the background up slightly and nudge the focal point upward */
-          background-size: 160% auto;
-          background-position: center 22%;
+          /* let the image cover the area while keeping top-focused composition */
+          background-size: cover;
+          background-position: center top;
         }
 
         .hero-content {
